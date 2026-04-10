@@ -49,7 +49,7 @@
                             turns += 1;
                             Thread.Sleep(750);
                             Console.WriteLine("Turn {0}:", turns);
-                            Random rand = new Random();
+                            static Random rand = new Random();
                             int target = rand.Next(0, players.Count);
                             while (target == i || players[target].isDead || !((player.NumOP - CountDeadPlayers(players)) >= 2))
                             {
